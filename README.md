@@ -5,7 +5,7 @@ A bare-bones TypeScript Vue.js project with example webpack configuration that e
 - Vue.js `.vue` single file components that hot-reload
 - Fast TypeScript incremental compilation with hot-reloads
 - Use TypeScript in `.vue` component files
-- Simple explicit webpack configuration files that are commented and readable so you are able to customize further to suit your needs.
+- Simple explicit webpack 4 configuration files that are commented and readable so you are able to customize further to suit your needs.
 - Uses latest recommended cli tools `webpack-serve` for development and `webpack-command` for building production assets.
 
 # How to use
