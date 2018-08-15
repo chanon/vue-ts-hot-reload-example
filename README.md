@@ -12,11 +12,20 @@ A bare-bones TypeScript Vue.js project with example webpack configuration that e
 1. Download/clone the project
 2. Run
 ```
+npm install
+```
+or
+```
+yarn
+```
+
+3. Run
+```
 npm run dev
 ```
 and open your browser to `http://localhost:8080`. Try making changes to the component files and see hot reload changes.
 
-3. Run
+4. Run
 ```
 npm run prod
 ```
@@ -30,6 +39,11 @@ So I decided to create my own project using some files from the `vue-cli` genera
 If you have setup webpack from scratch before, you will know that getting it to do exactly what you want can be a nightmare. Especially when you want to make hot module reloading work.
 
 # Some things to note
-- Instead of trying to re-use or share common parts of the webpack development and production configs, I have separated them into two completely separate independent files. This makes reading and modifying each config straightforward. You don't have to skip to different files and wonder if what you are changing for dev will affect production and vice versa.
+- The project is setup so that you can use VS Code and the `Vetur` extension for code completion in `.vue` files for a pretty great development experience. For VS Code, make sure you have the Path Intellisense addon so that `@` aliasing works.
+- `@` has been aliased to the `src` path. This has been setup for VS Code, TypeScript and webpack. This allows you to reference components without having to do relative paths all the time. Eg. to reference the About component with an absolute(ish) path, you can do 
+```
+import About from '@/components/About.vue'
+``` 
+- Instead of trying to re-use or share common parts of the webpack development and production configs, I have separated them into two (and only two) completely separate independent files: `webpack.dev.config.js` and `webpack.prod.config.js`. This makes reading and modifying each config straightforward. You don't have to skip around to different files when reading or modifying the config. And you don't have to wonder if what you are changing for dev will affect production and vice versa.
 - The development config serves a static `index.html` file. In a real app, the index might be served dynamically from the actual application server. (Unless your app is a pure SPA that can use a static index file.)
 - The production config creates the static assets in the `dist/assets` folder. In a real app, the application server would read the `manifest.json` file and generate the correct `script`/`style` tags to reference the assets in the resulting response html. (Unless your app is a pure SPA that can use a static index file, then you might want to use `HtmlWebpackPlugin` to generate the index.)
