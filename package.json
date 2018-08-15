@@ -1,0 +1,43 @@
+{
+	"name": "vue-ts-hot-reload-example",
+	"version": "0.1.0",
+	"license": "MIT",
+	"author": "Chanon Sajjamanochai",
+	"scripts": {
+		"dev": "./node_modules/.bin/webpack-serve  --config ./webpack.dev.config.js --clipboard=false --reload=false",
+		"prod": "NODE_ENV=production ./node_modules/.bin/wp --config ./webpack.prod.config.js --progress"
+	},
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.3",
+		"babel-preset-env": "^1.6.1",
+		"copy-webpack-plugin": "^4.5.0",
+		"css-loader": "1.0.0",
+		"file-loader": "^1.1.11",
+		"fork-ts-checker-webpack-plugin": "^0.4.3",
+		"mini-css-extract-plugin": "^0.4.0",
+		"node-sass": "^4.9.2",
+		"optimize-css-assets-webpack-plugin": "5.0.0",
+		"sass-loader": "^7.0.3",
+		"style-loader": "^0.21.0",
+		"ts-lint": "^4.5.1",
+		"ts-loader": "^4.4.2",
+		"typescript": "^2.9.2",
+		"uglifyjs-webpack-plugin": "^1.2.4",
+		"url-loader": "^1.0.1",
+		"vue": "^2.5.16",
+		"vue-loader": "^15.2.6",
+		"vue-property-decorator": "^7.0.0",
+		"vue-router": "^3.0.1",
+		"vue-template-compiler": "^2.5.16",
+		"webpack": "4.16.3",
+		"webpack-command": "^0.4.1",
+		"webpack-manifest-plugin": "^2.0.3",
+		"webpack-serve": "^2.0.2",
+		"webpack-serve-overlay": "0.3.0"
+	},
+	"dependencies": {
+		"connect-history-api-fallback": "^1.5.0",
+		"koa-connect": "^2.0.1"
+	}
+}
